@@ -1,8 +1,11 @@
 from PIL import Image
 
-# To run on Atom with windows and correct package installed use ctrl+shft+b
+size = (400, 300)
 
 photo = Image.open('img/hotel3.jpg')
 
-photo.show()
+
 print(photo.size)
+print(photo.mode)
+
+photo.resize(size, resample=3).show()
